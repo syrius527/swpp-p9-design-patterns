@@ -3,13 +3,11 @@ class MatrixInfo:
         self._shape = [len(matrix), len(matrix[0])]
         self._value = matrix
 
-    @property
-    def shape(self):
-        return self._shape.copy()
-
-    @shape.setter
-    def shape(self, _):
-        raise ValueError("cannot modify shape directly")
+    #TODO: Return copy of _shape using decorator (Hint: @property)
+    def get_shape(self):
+        return self._shape
+    
+    #TODO: Prevent arbitrary setter of _shape using decorator
 
 
 if __name__ == "__main__":
