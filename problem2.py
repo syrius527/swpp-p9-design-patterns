@@ -1,3 +1,4 @@
+#builder
 class A:
     def build_floor(self):
         raise NotImplementedError
@@ -30,9 +31,13 @@ class Building(A):
     def build_ceiling(self):
         print("Build Building Ceiling")
 
-
 def build(cls):
     # TODO: fill this method
+    build = cls()
+    build.build_floor()
+    build.build_body()
+    build.build_ceiling()
+
 
 
 if __name__ == "__main__":
